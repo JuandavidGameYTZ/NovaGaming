@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaGaming</title>
+<link rel="icon" href="Imagenes/photo1712622670.ico" type="image/x-icon">
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #1f1f1f;
+  }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar li {
+    padding: 0 1rem;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  .navbar a:hover {
+    color: #00aaff;
+  }
+  .navbar .cart, .navbar .profile {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+  .action-button, .learn-more-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .action-button:hover, .learn-more-button:hover {
+    background-color: darkred;
+  }
+  .main-content {
+    text-align: center;
+    padding: 2rem;
+  }
+  .main-content h1 {
+    margin-bottom: 1rem;
+  }
+  .game-gallery {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+  .game-img {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  .game-img:hover {
+    transform: scale(1.1);
+  }
+  .logo {
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+  }
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border: 2px solid white;
+  }
+  .carousel-img {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+  .carousel-img:first-child {
+    display: block;
+  }
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  .carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .carousel-button.prev {
+    left: 10px;
+  }
+  .carousel-button.next {
+    right: 10px;
+  }
+  .navbar li:hover {
+    background-color: #333;
+  }
+  .navbar .active {
+    background-color: #555;
+  }
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .carousel-img {
+    animation: fade 1s ease-in-out;
+  }
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li class="active"><a href="#home">Home</a></li>
+      <li><a href="#offerings">Ofertas</a></li>
+      <li><a href="#initiatives">Iniciativas</a></li>
+      <li><a href="#contact">Contactanos</a></li>
+    </ul>
+    <img src="Imagenes/photo1712622670-removebg.png" alt="Logo" class="logo">
+    <div>
+      <button class="action-button">Comprar</button>
+      <span class="cart">🛒</span>
+      <span class="profile">👤</span>
+    </div>
+  </nav>
+  <div id="carousel-section">
+    <p style="text-align: center;">DESTACADOS Y RECOMENDADOS</p>
+    <div class="carousel">
+      <img src="Imagenes/roblox-mejores-juegos_862x485.jpg" alt="Imagen 1" class="carousel-img">
+      <img src="Imagenes/WOXKPV2C2NPMNDXYYM6VBC6VKQ.avif" alt="Imagen 2" class="carousel-img">
+      <img src="Imagenes/202211215412443_1.jpg" alt="Imagen 3" class="carousel-img">
+      <button class="carousel-button prev">←</button>
+      <button class="carousel-button next">→</button>
+    </div>
+  </div>
+  <div class="main-content">
+    <h1>NovaGaming</h1>
+    <p>NovaGaming es una compañía de juegos con sede en Bayaguana especializada en el desarrollo de juegos.</p>
+    <button class="learn-more-button" onclick="showMoreInfo(this)">Ver más</button>
+    <div id="more-info" class="hidden">
+      <p>Fundada en 2010, NovaGaming ha crecido exponencialmente gracias a su compromiso con la innovación y la calidad. Con una cartera de más de 50 juegos exitosos, la empresa se ha establecido como un líder en la industria. Su equipo está compuesto por talentosos desarrolladores, diseñadores y especialistas en marketing que trabajan juntos para crear experiencias de juego inolvidables.</p>
+      <p>La misión de NovaGaming es brindar entretenimiento de alta calidad a jugadores de todo el mundo, siempre buscando nuevas maneras de sorprender y deleitar a su audiencia. Con oficinas en varios países y una base de usuarios global, NovaGaming continúa expandiendo sus horizontes y explorando nuevas fronteras en el mundo de los videojuegos.</p>
+    </div>
+  </div>
+  <div id="offerings-section" class="hidden">
+    <p style="text-align: center;">OFERTAS ESPECIALES</p>
+    <div class="game-gallery">
+      <img src="Imagenes/roblox-mejores-juegos_862x485.jpg" alt="Juego 1" class="game-img">
+      <img src="Imagenes/WOXKPV2C2NPMNDXYYM6VBC6VKQ.avif" alt="Juego 2" class="game-img">
+      <img src="Imagenes/202211215412443_1.jpg" alt="Juego 3" class="game-img">
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.game-img').forEach(img => {
+      img.addEventListener('click', () => {
+        alert('Has seleccionado ' + img.alt);
+      });
+    });
+
+    let currentImgIndex = 0;
+    const images = document.querySelectorAll('.carousel-img');
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const nextButton = document.querySelector('.carousel-button.next');
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.style.display = i === index ? 'block' : 'none';
+      });
+    }
+
+    prevButton.addEventListener('click', () => {
+      currentImgIndex = (currentImgIndex - 1 + images.length) % images.length;
+      showImage(currentImgIndex);
+    });
+
+    nextButton.addEventListener('click', () => {
+      currentImgIndex = (currentImgIndex + 1) % images.length;
+      showImage(currentImgIndex);
+    });
+
+    setInterval(() => {
+      currentImgIndex = (currentImgIndex + 1) % images.length;
+      showImage(currentImgIndex);
+    }, 3000);
+
+    document.querySelectorAll('.navbar a').forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector('.navbar .active').classList.remove('active');
+        this.parentNode.classList.add('active');
+        const sectionId = this.getAttribute('href').substring(1);
+        showSection(sectionId);
+      });
+    });
+
+    function showMoreInfo(button) {
+      document.getElementById('more-info').classList.toggle('hidden');
+      button.style.display = 'none';
+    }
+
+    function showSection(sectionId) {
+      const sections = {
+        home: `
+          <h1>NovaGaming</h1>
+          <p>NovaGaming es una compañía de juegos con sede en Bayaguana especializada en el desarrollo de juegos.</p>
+          <button class="learn-more-button" onclick="showMoreInfo(this)">Ver más</button>
+          <div id="more-info" class="hidden">
+            <p>Fundada en 2010, NovaGaming ha crecido exponencialmente gracias a su compromiso con la innovación y la calidad. Con una cartera de más de 50 juegos exitosos, la empresa se ha establecido como un líder en la industria. Su equipo está compuesto por talentosos desarrolladores, diseñadores y especialistas en marketing que trabajan juntos para crear experiencias de juego inolvidables.</p>
+            <p>La misión de NovaGaming es brindar entretenimiento de alta calidad a jugadores de todo el mundo, siempre buscando nuevas maneras de sorprender y deleitar a su audiencia. Con oficinas en varios países y una base de usuarios global, NovaGaming continúa expandiendo sus horizontes y explorando nuevas fronteras en el mundo de los videojuegos.</p>
+          </div>`,
+        offerings: `
+          <h2>Ofertas</h2>
+          <p>Contacta con nosotros al 123-456-7890 para conocer nuestras ofertas especiales.</p>`,
+        initiatives: `
+          <h2>Iniciativas</h2>
+          <p>Conoce nuestras iniciativas llamando al 123-456-7891.</p>`,
+        contact: `
+          <h2>Contactanos</h2>
+          <p>Puedes contactarnos al 123-456-7892 o enviarnos un correo a info@novagaming.com.</p>`
+      };
+
+      document.querySelector('.main-content').innerHTML = sections[sectionId] || sections['home'];
+
+      if (sectionId === 'home') {
+        document.getElementById('carousel-section').classList.remove('hidden');
+      } else {
+        document.getElementById('carousel-section').classList.add('hidden');
+      }
+
+      if (sectionId === 'offerings') {
+        document.getElementById('offerings-section').classList.remove('hidden');
+      } else {
+        document.getElementById('offerings-section').classList.add('hidden');
+      }
+    }
+
+    // Initialize to show home section
+    showSection('home');
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  /* Desplazamiento suave */
+  #scroll-section {
+    height: 500px;
+    background-color: #f2f2f2;
+    scroll-behavior: smooth;
+  }
+  
+  /* Efecto de desvanecimiento */
+  #fade-section {
+    padding: 50px;
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  #fade-section.fade-in {
+    opacity: 1;
+  }
+  
+  /* Galería de imágenes interactiva */
+  #gallery-section {
+    padding: 50px;
+    background-color: #f2f2f2;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gallery-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    opacity: 0.7;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .gallery-image:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  

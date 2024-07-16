@@ -1,0 +1,359 @@
+/* Estilos generales */
+body {
+  background-color: #f2f2f2;
+  color: #333;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+/* Encabezado */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+.logo img {
+  display: block;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Barra de navegación */
+nav {
+  background-color: #000;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00aaff;
+}
+
+nav ul li a.active {
+  color: #00aaff;
+}
+
+nav ul li a.hovered:hover {
+  color: #ff0000; /* Cambia el color al rojo */
+}
+
+nav ul li a.hover-blue:hover {
+  color: #0000ff; /* Cambia el color al azul */
+}
+
+nav ul li a.hover-green:hover {
+  color: #00ff00; /* Cambia el color al verde */
+}
+
+/* Secciones */
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  color: #333;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+article {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+article h3 {
+  color: #333;
+}
+
+article p {
+  color: #555;
+}
+
+/* Noticias principales */
+.news-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.news-column {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.news-column article {
+  width: 45%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.news-column article img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.news-column article .content {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.news-column article h3 {
+  color: #333;
+  font-size: 18px;
+  margin: 0;
+}
+
+.news-column article p {
+  color: #555;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  article h3 {
+    font-size: 16px;
+  }
+
+  .news-column {
+    width: 100%;
+  }
+
+  .news-column article {
+    width: 90%;
+  }
+}
+
+.news-column article:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+section article {
+  display: flex;
+  align-items: center;
+}
+
+section article .image {
+  width: 200px;
+  margin-right: 20px;
+}
+
+section article .content {
+  flex-grow: 1;
+}
+
+section article h3 {
+  margin-top: 0;
+}
+
+section article p {
+  margin-bottom: 0;
+}
+
+.news-item {
+  transition: transform 0.3s ease-in-out;
+}
+
+.news-item:hover {
+  transform: scale(1.1);
+}
+
+.brand-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.brand-logos img {
+  width: 50px; /* Ajusta el tamaño de los logos según tus necesidades */
+  margin: 0 10px; /* Espacio entre los logos */
+}
+
+#sticky-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+#sticky-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#sticky-menu ul li {
+  margin: 0 10px;
+}
+
+#sticky-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+#sticky-menu ul li a:hover {
+  color: #00aaff;
+}
+
+/* Añade estilos adicionales según tus preferencias */
+#s3 {
+  margin-bottom: 80px;
+}
+
+#s3 h2 {
+  text-align: center;
+}
+
+.news-item {
+  transition: transform 0.3s ease-in-out;
+}
+
+.news-item:hover {
+  transform: scale(1.05);
+}
+
+.news-item a {
+  display: flex;
+  align-items: center;
+}
+
+.news-item .image {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.news-item .content {
+  flex-grow: 1;
+}
+
+.news-item h3 {
+  margin-top: 0;
+}
+
+.news-item p {
+  margin-bottom: 0;
+}
+/* Estilos para la sección de modificaciones */
+#s4 {
+  margin-bottom: 80px;
+}
+
+#s4 h2 {
+  color: #333;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#s4 .news-item {
+  transition: transform 0.3s ease-in-out;
+}
+
+#s4 .news-item:hover {
+  transform: scale(1.05);
+}
+
+#s4 .news-item a {
+  display: flex;
+  align-items: center;
+}
+
+#s4 .news-item .image {
+  width: 200px;
+  margin-right: 20px;
+}
+
+#s4 .news-item .content {
+  flex-grow: 1;
+}
+
+#s4 .news-item h3 {
+  margin-top: 0;
+}
+
+#s4 .news-item p {
+  margin-bottom: 0;
+}
